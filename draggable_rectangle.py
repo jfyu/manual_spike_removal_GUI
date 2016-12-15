@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
+import numpy as np
 
 class selection_Rectangle(object):
     def __init__(self):
@@ -40,5 +41,8 @@ class selection_Rectangle(object):
         self.rect.set_height(self.y1 - self.y0)
         self.rect.set_xy((self.x0, self.y0))
         self.ax.figure.canvas.draw()
+x = np.linspace(0,3,100)
+y = np.sin(x)
+plt.plot(x,y)
 a = selection_Rectangle()
 plt.show()
